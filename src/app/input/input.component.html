@@ -1,1 +1,21 @@
-<p>input works!</p>
+<div class="app d-flex flex-wrap">
+  <div class="card">
+    <div class="card-body">
+      <p class="text-muted"> it will accept number only</p>
+		<div class="form-group">
+			<label for="numberOnly">Enter Id (Number)</label>
+			<input NumberOnly class="form-control" id="numberOnly" [(ngModel)]="user.id">
+		</div>
+    </div>
+  </div>  
+  <div  class="card">
+    <div class="card-body">
+      <p class="text-muted"> it will accept text only</p>
+		<div class="form-group">
+			<label for="textOnly">Enter Name</label>
+			<input TextOnly class="form-control" id="textOnly" [(ngModel)]="user.name">
+		</div>
+
+    </div>
+  </div>
+</div>

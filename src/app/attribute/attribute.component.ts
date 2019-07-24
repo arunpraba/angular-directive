@@ -1,3 +1,4 @@
+import { TrackService } from './../service/track.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AttributeComponent implements OnInit {
   message = 'I am input from Component';
   secondMessage = 'I am second input from Component';
-  constructor() {}
+  showMessage = 'I am a message from Component based on click event';
+  track:any = []
+  constructor(private trackService:TrackService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.track = this.trackService.logEvents
+  }
 }

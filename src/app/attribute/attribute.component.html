@@ -13,6 +13,27 @@
   </div>
   <div class="card">
     <div class="card-body">
+      <div class="btn btn-light" [appAlert]="showMessage">
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <button class="btn btn-secondary" [appTrack]="'Pause'">
+        Pause
+      </button>
+      <button class="btn btn-primary" [appTrack]="'Play'">
+        Play
+      </button>
+      <button class="btn btn-success" [appTrack]="'Next'">
+        Next
+      </button>
+
+      <div *ngIf="track.length>0">
+        <code>
+          {{track | json}}
+        </code>
+      </div>
 
     </div>
   </div>

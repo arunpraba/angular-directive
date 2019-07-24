@@ -1,1 +1,17 @@
-<p>structural works!</p>
+<div class="app d-flex flex-wrap">
+  <div class="card">
+    <div class="card-body">
+      <p class="text-muted"> *ngIf is used</p>
+      <button class="btn btn-warning" (click)="showButton()">{{isShow ? 'Click to hide' : 'Click to View'}}</button>   
+    </div>
+  </div>  
+  <div *ngIf="isShow" class="card">
+    <div class="card-body">
+      <p class="text-muted"> *ngFor is used</p>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let name of names">{{name}}</li> 
+      </ul>
+
+    </div>
+  </div>
+</div>

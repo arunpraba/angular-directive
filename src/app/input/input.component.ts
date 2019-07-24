@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input.component.scss']
 })
 export class InputComponent implements OnInit {
+	user = {
+		id:'',
+		name:''
+	}
 
   constructor() { }
 

@@ -1,5 +1,7 @@
+import { TrackService } from './service/track.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +14,10 @@ import { StructuralComponent } from './structural/structural.component';
 import { DcComponent } from './dc/dc.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { InnerTextDcDirective } from './directives/inner-text-dc.directive';
+import { AlertDirective } from './directives/alert.directive';
+import { TrackDirective } from './directives/track.directive';
+import { NumberOnlyDirective } from './directives/number.directive';
+import { TextOnlyDirective } from './directives/text-only.directive';
 
 @NgModule({
   declarations: [
@@ -24,13 +30,18 @@ import { InnerTextDcDirective } from './directives/inner-text-dc.directive';
     StructuralComponent,
     DcComponent,
     HighlightDirective,
-    InnerTextDcDirective
+    InnerTextDcDirective,
+    AlertDirective,
+    TrackDirective,
+    TextOnlyDirective,
+    NumberOnlyDirective
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [TrackService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
